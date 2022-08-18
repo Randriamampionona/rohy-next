@@ -1,0 +1,96 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	/* color */
+	--primary-color: hsl(335, 100%, 35%);
+	--dark-color: hsl(240, 3%, 6%);
+	--white-color: hsl(0, 0%, 98%);
+	--light-color: hsl(334, 7%, 79%);
+	--swiper-theme-color: var(--primary-color) !important;
+
+	/* spacing & size */
+	--left-right-spacing: 0rem 3rem;
+	--navbar-desktop-height: 4.5rem;
+	--default-btn-height: 2.5rem;
+	--default-btn-width: 7.5rem;
+
+	/* other */
+	--transition: 200ms ease;
+}
+
+::-webkit-scrollbar {
+	background: hsl(240, 2%, 10%);
+	width: 0.75rem;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(131, 2, 56, 0.527);
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 3px var(--dark-color);
+	border: 2.5px solid hsl(240, 2%, 10%);
+
+	&:hover {
+		background: hsla(335, 100%, 35%, 0.712);
+	}
+}
+
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+html,
+body {
+	font-family: "Poppins", sans-serif;
+	background: var(--white-color);
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: none;
+
+	&:active {
+		scale: 0.98;
+	}
+}
+
+button#CTA-btn-one {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+
+	background: var(--primary-color);
+	width: var(--default-btn-width);
+	height: var(--default-btn-height);
+	border-radius: 2px;
+	cursor: pointer;
+
+	&:hover {
+		filter: contrast(0.75);
+	}
+
+	span {
+		color: var(--white-color);
+		font-size: 1rem;
+		font-weight: 500;
+	}
+
+	svg {
+		color: var(--white-color);
+		font-size: 1.1rem;
+	}
+}
